@@ -10,26 +10,26 @@ const Topbar = () => {
     <>
       <div
         className={`
-          ${isOpen ? 'bg-indigo-800' : 'bg-white'} 
-          px-14 w-full flex items-center h-20 justify-between 
-          transition-colors duration-400 z-10 fixed
+          ${isOpen ? 'bg-[#0A192F]' : 'bg-[#1F2A40]'} 
+          px-8 lg:px-14 w-full flex items-center h-20 justify-between 
+          transition-colors duration-400 z-10 fixed top-0 left-0 right-0
         `}
       >
         <div
           className={`
-            text-2xl ${isOpen ? 'text-white' : 'text-indigo-800'} 
-            w-auto flex items-center gap-20 
+            text-2xl ${isOpen ? 'text-white' : 'text-[#4F83CC]'} 
+            w-auto flex items-center gap-5 lg:gap-20 
             transition-colors duration-400
           `}
         >
-          hello
+          <p className="font-semibold">hello</p>
         </div>
         <div className='cursor-pointer'>
           {isOpen ? (
             <CloseIcon 
               onClick={() => setIsOpen(!isOpen)}
               className={`
-                ${isOpen ? 'text-white' : 'text-indigo-800'} 
+                ${isOpen ? 'text-white' : 'text-[#4F83CC]'} 
                 transition-colors duration-400
               `}
             />
@@ -37,7 +37,7 @@ const Topbar = () => {
             <DensityMediumIcon 
               onClick={() => setIsOpen(!isOpen)}
               className={`
-                ${isOpen ? 'text-white' : 'text-indigo-800'} 
+                ${isOpen ? 'text-white' : 'text-[#4F83CC]'} 
                 transition-colors duration-400
               `}
             />
