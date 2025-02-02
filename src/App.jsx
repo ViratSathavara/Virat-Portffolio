@@ -12,14 +12,14 @@
     return (
       <>
       <Topbar />
-      <div className="h-[calc(100vh-64px)] overflow-y-auto overflow-x-hidden snap-y snap-mandatory">
+      <div className="overflow-y-auto overflow-x-hidden snap-y snap-mandatory">
         <Home />
         <Intro />
         <Experience />
         <Skills />
         <Project />
       </div>
-      <Bottombar />
+      {/* <Bottombar />  */}
       </>
     )
   }
