@@ -1,41 +1,24 @@
-import React, { useState } from "react";
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Phone, Email } from "@mui/icons-material";
 
 const Intro = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseMove = (event) => {
-    if (isHovered) {
-      setMousePosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
-    }
-  };
-
-  // Adjusted rotation values for smoother effect
-  const rotateImage = isHovered
-    ? {
-        transform: `rotateY(${
-          (mousePosition.x - window.innerWidth / 2) / 15
-        }deg) rotateX(${-(mousePosition.y - window.innerHeight / 2) / 15}deg)`,
-        transition: "transform 0.2s ease-out", // Slow down the transition for smoother movement
-      }
-    : { transform: "rotateY(0deg) rotateX(0deg)" };
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
   return (
     <div
-      className="bg-[#0A192F] h-[calc(100vh-1px)] overflow-auto flex items-center justify-center"
+      ref={ref}
+      className={`bg-[#0A192F] h-[calc(100vh-1px)] overflow-auto flex items-center justify-center transition-all duration-1000 ${
+        inView ? "opacity-100" : "opacity-0"
+      }`}
       id="intro"
-      onMouseMove={handleMouseMove}
     >
       <div className="w-1/2 flex justify-center py-10">
         <div
-          className="w-[400px] h-[300px] rounded-lg overflow-hidden shadow-lg relative"
-          style={rotateImage}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          className="w-[400px] h-[300px] rounded-lg overflow-hidden shadow-lg relative transition-transform duration-1000 transform"
         >
           <img
             src="/src/assets/Computerimg2.png"
@@ -45,7 +28,11 @@ const Intro = () => {
         </div>
       </div>
 
-      <div className="text-white px-4 w-1/2 text-start">
+      <div
+        className={`text-white px-4 w-1/2 text-start transition-all duration-1000 ${
+          inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+        }`}
+      >
         <div className="max-w-190 text-justify">
           <p className="text-3xl">About Me</p>
           <p className="text-lg mt-10 mb-6">
