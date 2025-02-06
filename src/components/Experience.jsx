@@ -1,64 +1,181 @@
 import React from "react";
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineOppositeContent,
+} from "@mui/lab";
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { Typography } from "@mui/material";
 
 const experiences = [
   {
-    title: "Frontend Developer at Cloudpeak Technologies",
-    date: "June 2024 - Present",
-    description: [
-      'Contributed to the development of "Quick Hub" focusing on responsive template design.',
-      "Optimized UI performance through efficient coding practices.",
-      "Handled API calls for robust web applications.",
+    id: 1,
+    date: "2018",
+    title: "Class X",
+    description:
+      "Successfully completed secondary education with a 68.67% score, demonstrating dedication and a strong academic foundation.",
+    icon: <SchoolIcon />,
+  },
+  {
+    id: 2,
+    date: "2020",
+    title: "Class XII",
+    description:
+      "Completed higher secondary education with 55.37%, gaining essential skills and knowledge for further academic pursuits.",
+    icon: <SchoolIcon />,
+  },
+  {
+    id: 3,
+    date: "2020 - 2024",
+    title: "B.E. - Computer Engineering",
+    description:
+      "Graduated with a CGPA of 8.38 from Gujarat Technological University.",
+    icon: <SchoolIcon />,
+    icons: [
+      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/intellij-idea.svg" alt="vscode" className="h-7" />,
+      <img src="src/assets/html.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/css.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/javascript.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/bootstrap.png" alt="vscode" className="h-7" />,
+      <img
+        src="src/assets/adobe-illustrator.png"
+        alt="vscode"
+        className="h-7"
+      />,
+      <img
+        src="src/assets/adobe-premiere-pro.png"
+        alt="vscode"
+        className="h-7"
+      />,
+      <img src="src/assets/adobe-audition.png" alt="vscode" className="h-7" />,
     ],
   },
   {
-    title: "Software Developer Intern",
-    date: "Jan 2024 - Mar 2024",
-    description: [
-      'Built "Connectify", a social media app using Firebase DB.',
-      "Designed a website with Thymeleaf, REST API, and CRUD operations.",
-    ],
-  },
-  {
-    title: "ReactJS Intern at Nivaan Infotech",
+    id: 4,
     date: "Jan 2023 - Feb 2023",
-    description: [
-      "Learned how to enhance the usability of applications using accessibility standards.",
+    title: "ReactJS Intern at Nivaan Infotech",
+    description:
+      "Enhanced usability of applications by applying accessibility standards. Developed a word counter project, 'Docket,' using React.js, efficiently counting and displaying word counts.",
+    icon: <WorkIcon />,
+    icons: [
+      <img src="src/assets/react-js.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="src/assets/html.png" alt="html" className="h-7" />,
+      <img src="src/assets/css.png" alt="css" className="h-7" />,
+      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
     ],
+  },
+  {
+    id: 5,
+    date: "Jan 2024 - April 2024",
+    title: "Software Developer Intern",
+    description:
+      "Developed Connectify, a social media app utilizing Firebase DB with content-based features and advanced filtering. Designed a dynamic website using Thymeleaf, REST API, and CRUD operations for efficient product data management.",
+    icon: <WorkIcon />,
+    icons: [
+      <img src="src/assets/java.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/intellij-idea.svg" alt="react-js" className="h-7" />,
+      <img src="src/assets/sql-server.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/spring-boot.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/firebase.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="src/assets/html.png" alt="html" className="h-7" />,
+      <img src="src/assets/css.png" alt="css" className="h-7" />,
+      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+    ],
+  },
+  {
+    id: 6,
+    date: "June 2024 - Present",
+    title: "Frontend Developer at Cloudpeak Technologies",
+    description:
+      "Worked on the Quick Hub project, developing responsive interfaces and optimizing UI performance with React.js. Applied efficient coding practices to ensure high performance across devices. Contributed to server-side functionalities and API integrations using Node.js and Express.js. Additionally, handled video editing for meta permissions using Adobe Premiere Pro.",
+    icon: <WorkIcon />,
+    icons: [
+      <img src="src/assets/github.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/graphQl.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/express-js.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/nodejs.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="src/assets/html.png" alt="html" className="h-7" />,
+      <img src="src/assets/css.png" alt="css" className="h-7" />,
+      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/vite.png" alt="vscode" className="h-7" />,
+      <img
+        src="src/assets/adobe-premiere-pro.png"
+        alt="vscode"
+        className="h-7"
+      />,
+    ],
+  },
+  {
+    id: 7,
+    title: "Continue...",
+    icon: <ArrowDownwardIcon />,
   },
 ];
 
 const Experience = () => {
   return (
-    <div
-      className="bg-[#0A192F] h-[calc(100vh-1px)] overflow-auto"
-      id="experience"
-    >
-      <div className="flex">
-        <div className="flex w-1/2 pl-40 flex-col">
-          <h2 className="text-white text-3xl font-bold mb-4">Experience</h2>
-          <div className="flex flex-wrap justify-between">
-            <div className="w-full px-4">
-              {experiences.map((exp, index) => (
-                <div key={index} className="text-white mb-6">
-                  <h3 className="text-xl font-semibold">{exp.title}</h3>
-                  <p>{exp.date}</p>
-                  <ul className="list-disc pl-5">
-                    {exp.description.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full sm:w-1/2 px-4">
-          <img
-            src="https://via.placeholder.com/400x300"
-            alt="Experience"
-            className="w-full h-auto rounded-lg"
-          />
+    <div className="bg-[#0A192F] py-10" id="experience">
+      <h2 className="text-white text-3xl font-bold text-center mb-6">
+        Experience & Education
+      </h2>
+      <div className="w-full flex justify-center">
+        <div className="max-w-full">
+          <Timeline position="alternate">
+            {experiences.map((exp, index) => (
+              <TimelineItem key={index}>
+                <TimelineOppositeContent>
+                  <Typography className="text-gray-300">{exp.date}</Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator className="flex flex-col items-center">
+                  <TimelineDot color="primary">{exp.icon}</TimelineDot>
+                  {index !== experiences.length - 1 && <TimelineConnector />}
+                </TimelineSeparator>
+                <TimelineContent>
+                  <div className="flex flex-col space-y-6">
+                    <Typography variant="h6" color="white" fontWeight="bold">
+                      {exp.title}
+                    </Typography>
+                    {exp.description && (
+                      <Typography
+                        className="text-gray-300 mt-2 text-justify max-w-4xl"
+                        style={{ lineHeight: "1.6" }}
+                      >
+                        {exp.description}
+                      </Typography>
+                    )}
+                    <div className="my-3">
+                      {exp?.icons?.length > 0 && (
+                        <div
+                          className={`flex flex-wrap items-center space-x-2 mt-2 ${
+                            index % 2 === 0 ? "justify-start" : "justify-end"
+                          }`}
+                        >
+                          {exp.icons.map((icon, iconIndex) => (
+                            <div
+                              key={iconIndex}
+                              className="h-12 bg-blue-100 p-0.5 bg-opacity-30 rounded-full flex items-center justify-center w-12 mb-2 transition-all duration-300 ease-in-out hover:bg-blue-300 hover:scale-110"
+                            >
+                              {icon}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
         </div>
       </div>
     </div>
