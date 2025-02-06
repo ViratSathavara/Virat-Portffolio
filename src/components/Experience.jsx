@@ -8,7 +8,119 @@ import {
   TimelineDot,
   TimelineOppositeContent,
 } from "@mui/lab";
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Typography } from "@mui/material";
+
+const experiences = [
+  {
+    id: 1,
+    date: "2018",
+    title: "Class X",
+    description:
+      "Successfully completed secondary education with a 68.67% score, demonstrating dedication and a strong academic foundation.",
+    icon: <SchoolIcon />,
+  },
+  {
+    id: 2,
+    date: "2020",
+    title: "Class XII",
+    description:
+      "Completed higher secondary education with 55.37%, gaining essential skills and knowledge for further academic pursuits.",
+    icon: <SchoolIcon />,
+  },
+  {
+    id: 3,
+    date: "2020 - 2024",
+    title: "B.E. - Computer Engineering",
+    description:
+      "Graduated with a CGPA of 8.38 from Gujarat Technological University.",
+    icon: <SchoolIcon />,
+    icons: [
+      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/intellij-idea.svg" alt="vscode" className="h-7" />,
+      <img src="src/assets/html.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/css.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/javascript.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/bootstrap.png" alt="vscode" className="h-7" />,
+      <img
+        src="src/assets/adobe-illustrator.png"
+        alt="vscode"
+        className="h-7"
+      />,
+      <img
+        src="src/assets/adobe-premiere-pro.png"
+        alt="vscode"
+        className="h-7"
+      />,
+      <img src="src/assets/adobe-audition.png" alt="vscode" className="h-7" />,
+    ],
+  },
+  {
+    id: 4,
+    date: "Jan 2023 - Feb 2023",
+    title: "ReactJS Intern at Nivaan Infotech",
+    description:
+      "Enhanced usability of applications by applying accessibility standards. Developed a word counter project, 'Docket,' using React.js, efficiently counting and displaying word counts.",
+    icon: <WorkIcon />,
+    icons: [
+      <img src="src/assets/react-js.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="src/assets/html.png" alt="html" className="h-7" />,
+      <img src="src/assets/css.png" alt="css" className="h-7" />,
+      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+    ],
+  },
+  {
+    id: 5,
+    date: "Jan 2024 - April 2024",
+    title: "Software Developer Intern",
+    description:
+      "Developed Connectify, a social media app utilizing Firebase DB with content-based features and advanced filtering. Designed a dynamic website using Thymeleaf, REST API, and CRUD operations for efficient product data management.",
+    icon: <WorkIcon />,
+    icons: [
+      <img src="src/assets/java.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/intellij-idea.svg" alt="react-js" className="h-7" />,
+      <img src="src/assets/sql-server.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/spring-boot.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/firebase.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="src/assets/html.png" alt="html" className="h-7" />,
+      <img src="src/assets/css.png" alt="css" className="h-7" />,
+      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+    ],
+  },
+  {
+    id: 6,
+    date: "June 2024 - Present",
+    title: "Frontend Developer at Cloudpeak Technologies",
+    description:
+      "Worked on the Quick Hub project, developing responsive interfaces and optimizing UI performance with React.js. Applied efficient coding practices to ensure high performance across devices. Contributed to server-side functionalities and API integrations using Node.js and Express.js. Additionally, handled video editing for meta permissions using Adobe Premiere Pro.",
+    icon: <WorkIcon />,
+    icons: [
+      <img src="src/assets/github.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/graphQl.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/express-js.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/nodejs.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="src/assets/html.png" alt="html" className="h-7" />,
+      <img src="src/assets/css.png" alt="css" className="h-7" />,
+      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+      <img src="src/assets/vite.png" alt="vscode" className="h-7" />,
+      <img
+        src="src/assets/adobe-premiere-pro.png"
+        alt="vscode"
+        className="h-7"
+      />,
+    ],
+  },
+  {
+    id: 7,
+    title: "Continue...",
+    icon: <ArrowDownwardIcon />,
+  },
+];
 
 const Experience = () => {
   return (
@@ -19,85 +131,50 @@ const Experience = () => {
       <div className="w-full flex justify-center">
         <div className="max-w-full">
           <Timeline position="alternate">
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography color="gray">June 2024 - Present</Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot color="primary" />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent>
-                <div className="flex flex-col">
-                  <Typography variant="h6" color="white" fontWeight="bold">
-                    Frontend Developer at Cloudpeak Technologies
-                  </Typography>
-                  <Typography className="text-gray-300 mt-2 text-justify max-w-3xl">
-                    At Cloudpeak Technologies and Services, I worked on the
-                    Quick Hub project, developing responsive interfaces and
-                    optimizing UI performance with React.js. I applied efficient
-                    coding practices to ensure high performance across devices.
-                    With basic knowledge of Node.js and Express.js, I
-                    contributed to server-side functionalities and API
-                    integrations, enabling smooth data flow. Additionally, I
-                    worked on video editing for meta permissions, using Adobe
-                    Premiere Pro to create high-quality videos aligned with
-                    project requirements.
-                  </Typography>
-                </div>
-              </TimelineContent>
-            </TimelineItem>
-
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography color="gray">Jan 2024 - Mar 2024</Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot color="primary" />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent>
-                <div className="flex flex-col">
-                  <Typography variant="h6" color="white" fontWeight="bold">
-                    Software Developer Intern
-                  </Typography>
-                  <Typography className="text-gray-300 mt-2 text-justify max-w-3xl">
-                    I developed Connectify, a social media app utilizing
-                    Firebase DB, integrating content-based features with
-                    advanced filtering techniques for an enhanced user
-                    experience. Additionally, I designed a dynamic website using
-                    Thymeleaf, REST API, and CRUD operations, enabling efficient
-                    product data management, including creation, retrieval,
-                    editing, and deletion.
-                  </Typography>
-                </div>
-              </TimelineContent>
-            </TimelineItem>
-
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography color="gray">Jan 2023 - Feb 2023</Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot color="primary" />
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent>
-                <div className="flex flex-col">
-                  <Typography variant="h6" color="white" fontWeight="bold">
-                    ReactJS Intern at Nivaan Infotech
-                  </Typography>
-                  <Typography className="text-gray-300 mt-2 text-justify max-w-3xl">
-                    I learned how to enhance the usability of existing
-                    applications by applying the latest accessibility standards,
-                    ensuring a more inclusive user experience. Additionally, I
-                    developed a word counter project called "Docket" using
-                    React.js, which efficiently counts and displays the number
-                    of words in a given text.
-                  </Typography>
-                </div>
-              </TimelineContent>
-            </TimelineItem>
+            {experiences.map((exp, index) => (
+              <TimelineItem key={index}>
+                <TimelineOppositeContent>
+                  <Typography className="text-gray-300">{exp.date}</Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator className="flex flex-col items-center">
+                  <TimelineDot color="primary">{exp.icon}</TimelineDot>
+                  {index !== experiences.length - 1 && <TimelineConnector />}
+                </TimelineSeparator>
+                <TimelineContent>
+                  <div className="flex flex-col space-y-6">
+                    <Typography variant="h6" color="white" fontWeight="bold">
+                      {exp.title}
+                    </Typography>
+                    {exp.description && (
+                      <Typography
+                        className="text-gray-300 mt-2 text-justify max-w-4xl"
+                        style={{ lineHeight: "1.6" }}
+                      >
+                        {exp.description}
+                      </Typography>
+                    )}
+                    <div className="my-3">
+                      {exp?.icons?.length > 0 && (
+                        <div
+                          className={`flex flex-wrap items-center space-x-2 mt-2 ${
+                            index % 2 === 0 ? "justify-start" : "justify-end"
+                          }`}
+                        >
+                          {exp.icons.map((icon, iconIndex) => (
+                            <div
+                              key={iconIndex}
+                              className="h-12 bg-blue-100 p-0.5 bg-opacity-30 rounded-full flex items-center justify-center w-12 mb-2 transition-all duration-300 ease-in-out hover:bg-blue-300 hover:scale-110"
+                            >
+                              {icon}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
           </Timeline>
         </div>
       </div>
