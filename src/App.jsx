@@ -6,7 +6,7 @@ import Intro from './components/Intro';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Project from './components/Project';
-import Contact from './components/Contact';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Experience />
         <Skills />
         <Project />
-        <Contact />
+        <ContactUs />
       </div>
       {/* <Bottombar /> */}
     </>

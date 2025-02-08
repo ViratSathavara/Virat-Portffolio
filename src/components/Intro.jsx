@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Phone, Email } from "@mui/icons-material";
+import { motion } from 'framer-motion';
 
 const Intro = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+
+  const handleMouseMove = (event) => {
+    if (isHovered) {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    }
+  };
+
+  const rotateImage = isHovered
+    ? {
+        transform: `rotateY(${(mousePosition.x - window.innerWidth / 2) / 15}deg) 
+                    rotateX(${-(mousePosition.y - window.innerHeight / 2) / 15}deg)`,
+        transition: "transform 0.2s ease-out",
+      }
+    : { transform: "rotateY(0deg) rotateX(0deg)" };
 
   return (
     <div
@@ -15,17 +29,23 @@ const Intro = () => {
         inView ? "opacity-100" : "opacity-0"
       }`}
       id="intro"
+      onMouseMove={handleMouseMove}
     >
       <div className="w-1/2 flex justify-center py-10">
-        <div
-          className="w-[400px] h-[300px] rounded-lg overflow-hidden shadow-lg relative transition-transform duration-1000 transform"
+        <motion.div
+          className="w-[400px] h-auto rounded-lg overflow-hidden shadow-lg relative"
+          style={rotateImage}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          animate={{ y: [0, -5, 0] }}
+          transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
         >
           <img
             src="/src/assets/Computerimg2.png"
             alt="Computer Setup"
             className="object-cover w-full h-full"
           />
-        </div>
+        </motion.div>
       </div>
 
       <div
@@ -45,11 +65,10 @@ const Intro = () => {
             Currently, I’m working with Cloudpeak Technologies and Services,
             where I’m refining my skills in front-end development and
             contributing to innovative projects. I'm passionate about creating
-            responsive, visually appealing user interfaces and continuously stay
-            updated with the latest technologies to craft efficient and engaging
-            web solutions.
+            responsive, visually appealing user interfaces and continuously
+            stay updated with the latest technologies to craft efficient and
+            engaging web solutions.
           </p>
-
           <div className="flex justify-start gap-6 mt-4 flex-col">
             <div className="flex items-center gap-2 text-lg">
               <Phone style={{ color: "#4F83CC" }} />

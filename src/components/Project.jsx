@@ -50,7 +50,13 @@ const Project = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <div id="project" className="text-white bg-[#101f34] min-h-screen py-10 px-5 flex flex-col items-center">
+    <motion.div
+      id="project"
+      className="text-white bg-[#101f34] min-h-screen py-10 px-5 flex flex-col items-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -67,12 +73,14 @@ const Project = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
-            className="bg-[#0d1a2b] p-5 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            whileHover={{ scale: 1.05 }}
+            className="bg-[#0d1a2b] p-5 rounded-lg shadow-lg transition-transform duration-300"
           >
-            <img
+            <motion.img
               src={`src/assets/${project.image}`}
               alt={project.title}
               className="w-full h-40 object-cover rounded-md"
+              whileHover={{ scale: 1.1 }}
             />
             <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
             <p className="text-gray-300 text-sm mt-2">{project.description}</p>
@@ -98,13 +106,14 @@ const Project = () => {
         ))}
       </div>
 
-      <button
+      <motion.button
         onClick={() => setShowAll(!showAll)}
         className="mt-6 bg-[#00BFAE] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#009b8a] transition"
+        whileHover={{ scale: 1.1 }}
       >
         {showAll ? "Show Less Projects" : "See More Projects"}
-      </button>
-    </div>
+      </motion.button>
+    </motion.div>
   );
 };
 
