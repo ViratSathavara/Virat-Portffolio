@@ -98,13 +98,14 @@ const experiences = [
     date: "June 2024 - Present",
     title: "Frontend Developer at Cloudpeak Technologies",
     description:
-      "Worked on the Quick Hub project, developing responsive interfaces and optimizing UI performance with React.js. Applied efficient coding practices to ensure high performance across devices. Contributed to server-side functionalities and API integrations using Node.js and Express.js. Additionally, handled video editing for meta permissions using Adobe Premiere Pro.",
+      "Worked on the Quick Hub project, developing responsive interfaces and optimizing UI performance with React.js. Applied efficient coding practices to ensure high performance across devices. Contributed to server-side functionalities and API integrations using Node.js, Express.js and Nest.js. Additionally, handled video editing for meta permissions using Adobe Premiere Pro.",
     icon: <WorkIcon />,
     icons: [
       <img src="src/assets/github.png" alt="vscode" className="h-7" />,
       <img src="src/assets/graphQl.png" alt="react-js" className="h-7" />,
       <img src="src/assets/express-js.png" alt="react-js" className="h-7" />,
       <img src="src/assets/nodejs.png" alt="react-js" className="h-7" />,
+      <img src="src/assets/nestjs.png" alt="react-js" className="h-7" />,
       <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
       <img src="src/assets/html.png" alt="html" className="h-7" />,
       <img src="src/assets/css.png" alt="css" className="h-7" />,
@@ -126,54 +127,85 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <motion.div className="bg-[#101f34] py-10" id="experience" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, ease: "easeInOut" }}>
-      <h2 className="pt-20 text-white text-3xl font-bold text-center mb-6">Experience & Education</h2>
+    <motion.div
+      className="bg-[#101f34] py-10"
+      id="experience"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+    >
+      <h2 className="pt-20 text-white text-3xl font-bold text-center mb-6">
+      Education & Experience
+      </h2>
       <div className="w-full flex justify-center">
         <div className="max-w-full">
           <Timeline position="alternate">
             {experiences.map((exp, index) => {
-              const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+              const { ref, inView } = useInView({
+                triggerOnce: true,
+                threshold: 0.5,
+              });
               const isLeft = index % 2 === 0;
               return (
                 <motion.div
                   key={exp.id}
                   ref={ref}
                   initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-                  animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : isLeft ? -50 : 50 }}
+                  animate={{
+                    opacity: inView ? 1 : 0,
+                    x: inView ? 0 : isLeft ? -50 : 50,
+                  }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                 >
                   <TimelineItem position={isLeft ? "left" : "right"}>
                     <TimelineOppositeContent>
-                      <Typography className="text-gray-300">{exp.date}</Typography>
+                      <Typography className="text-gray-300">
+                        {exp.date}
+                      </Typography>
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                       <TimelineDot color="primary">{exp.icon}</TimelineDot>
-                      {index !== experiences.length - 1 && <TimelineConnector />}
+                      {index !== experiences.length - 1 && (
+                        <TimelineConnector />
+                      )}
                     </TimelineSeparator>
                     <TimelineContent>
                       <div className="flex flex-col space-y-6">
-                        <Typography variant="h6" color="white" fontWeight="bold">{exp.title}</Typography>
+                        <Typography
+                          variant="h6"
+                          color="white"
+                          fontWeight="bold"
+                        >
+                          {exp.title}
+                        </Typography>
                         {exp.description && (
-                          <Typography className="text-gray-300 mt-2 text-justify max-w-4xl" style={{ lineHeight: "1.6" }}>{exp.description}</Typography>
+                          <Typography
+                            className="text-gray-300 mt-2 text-justify max-w-4xl"
+                            style={{ lineHeight: "1.6" }}
+                          >
+                            {exp.description}
+                          </Typography>
                         )}
                         <div className="my-3">
-                      {exp?.icons?.length > 0 && (
-                        <div
-                          className={`flex flex-wrap items-center space-x-2 mt-2 ${
-                            index % 2 === 0 ? "justify-end" : "justify-start"
-                          }`}
-                        >
-                          {exp.icons.map((icon, iconIndex) => (
+                          {exp?.icons?.length > 0 && (
                             <div
-                              key={iconIndex}
-                              className="h-12 bg-blue-100 p-0.5 bg-opacity-30 rounded-full flex items-center justify-center w-12 mb-2 transition-all duration-300 ease-in-out hover:bg-blue-300 hover:scale-110"
+                              className={`flex flex-wrap items-center space-x-2 mt-2 ${
+                                index % 2 === 0
+                                  ? "justify-end"
+                                  : "justify-start"
+                              }`}
                             >
-                              {icon}
+                              {exp.icons.map((icon, iconIndex) => (
+                                <div
+                                  key={iconIndex}
+                                  className="h-12 bg-blue-100 p-0.5 bg-opacity-30 rounded-full flex items-center justify-center w-12 mb-2 transition-all duration-300 ease-in-out hover:bg-blue-300 hover:scale-110"
+                                >
+                                  {icon}
+                                </div>
+                              ))}
                             </div>
-                          ))}
+                          )}
                         </div>
-                      )}
-                    </div>
                       </div>
                     </TimelineContent>
                   </TimelineItem>

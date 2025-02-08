@@ -4,11 +4,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button } from "@mui/material";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const textRef = useRef(null);
   const isTypedInitialized = useRef(false);
   const [hoverEffect, setHoverEffect] = useState({ x: 0, y: 0 });
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (textRef.current && !isTypedInitialized.current) {
@@ -35,9 +37,9 @@ const Home = () => {
       <div className="w-1/2 flex flex-col pl-40 justify-center items-start">
         <div className="flex gap-20 items-center">
           <div>
-            <p className="text-white text-[40px]">Hi There, I'm</p>
+            <p className="text-white text-[40px]">{t('home.name')}</p>
             <h1 className="text-white text-[50px] font-bold">
-              Virat Sathavara
+            {t('home.name')}
             </h1>
             <div className="h-20">
               <span className="text-white text-[30px]" ref={textRef}></span>
@@ -68,7 +70,7 @@ const Home = () => {
                 document.body.removeChild(link);
               }}
             >
-              Download CV
+              {t('home.downloadCV')}
             </Button>
           </div>
           <div className="flex flex-col gap-6">
@@ -112,7 +114,7 @@ const Home = () => {
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
         >
           <img
-            src="src/assets/ProfileImage.jpg"
+            src="src/assets/image.jpeg"
             alt="Profile"
             className="object-cover w-full h-full"
           />

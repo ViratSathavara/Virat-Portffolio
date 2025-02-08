@@ -51,7 +51,7 @@ const Project = () => {
 
   return (
     <motion.div
-      id="project"
+      id="projects"
       className="text-white bg-[#101f34] min-h-screen py-10 px-5 flex flex-col items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -61,7 +61,7 @@ const Project = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-3xl font-bold mb-10"
+        className="text-3xl font-bold mb-10 pt-20"
       >
         My Projects
       </motion.h2>
@@ -72,7 +72,7 @@ const Project = () => {
             key={index}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
+            transition={{ duration: 0.2, }}
             whileHover={{ scale: 1.05 }}
             className="bg-[#0d1a2b] p-5 rounded-lg shadow-lg transition-transform duration-300"
           >
@@ -80,7 +80,7 @@ const Project = () => {
               src={`src/assets/${project.image}`}
               alt={project.title}
               className="w-full h-40 object-cover rounded-md"
-              whileHover={{ scale: 1.1 }}
+              // whileHover={{ scale: 1.1 }}
             />
             <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
             <p className="text-gray-300 text-sm mt-2">{project.description}</p>
@@ -89,7 +89,7 @@ const Project = () => {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#00BFAE] px-4 py-2 rounded-md text-black font-semibold hover:bg-[#009b8a] transition"
+                className="bg-[#4F83CC] px-4 py-2 rounded-md text-black font-semibold hover:bg-[#86aee7] transition"
               >
                 Live Demo
               </a>
@@ -108,7 +108,7 @@ const Project = () => {
 
       <motion.button
         onClick={() => setShowAll(!showAll)}
-        className="mt-6 bg-[#00BFAE] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#009b8a] transition"
+        className="mt-6 bg-[#4F83CC] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#86aee7] transition"
         whileHover={{ scale: 1.1 }}
       >
         {showAll ? "Show Less Projects" : "See More Projects"}

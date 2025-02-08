@@ -4,6 +4,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion } from "framer-motion";
 import ThankYouDialog from "./ThankYouDialog";
+import { Typography } from "@mui/material";
 
 const ContactUs = () => {
   const [open, setOpen] = React.useState(false);
@@ -51,14 +52,15 @@ const ContactUs = () => {
 
   return (
     <motion.div
+    id="contact"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       className="bg-[#0A192F] min-h-screen  p-5"
     >
-      <h2 className="text-2xl font-bold pt-20 text-center mb-6 text-gray-200">
+      <Typography variant="h4" align="center" className="pt-20" color="white" gutterBottom>
         Contact Us
-      </h2>
+      </Typography>
       <div className="flex flex-col pt-20 items-center justify-center">
         <motion.form
           initial={{ scale: 0.9, opacity: 0 }}

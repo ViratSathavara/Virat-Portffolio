@@ -1,0 +1,17 @@
+{
+  "home": {
+    "title1": "Hey There, I'm",
+    "name": "Virat Sathavara",
+    "downloadCV": "Download CV"
+  },
+  "intro": {
+    "title": "About Me",
+    "desc1": "I’m Virat Sathavara, a ReactJS Developer with hands-on experience in building dynamic and performance-driven web applications. I completed my Bachelor's in Computer Engineering in June 2024 from Smt. S. R. Patel Engineering College with a CGPA of 8.38.",
+    "desc2": "Currently, I’m working with Cloudpeak Technologies and Services, where I’m refining my skills in front-end development and contributing to innovative projects. I'm passionate about creating responsive, visually appealing user interfaces and continuously stay updated with the latest technologies to craft efficient and engaging web solutions.",
+    "mobileNo": "+91 123 456 7890",
+    "emailId": "viratsathavara@email.com"
+  },
+  "experience": {},
+  "skills": {},
+  "projects": {}
+}
