@@ -1,46 +1,52 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import image1 from "../assets/project1.jpg"
+import image2 from "../assets/project2.jpg"
+import image3 from "../assets/project3.jpg"
+import image4 from "../assets/project4.jpg"
+import image5 from "../assets/project5.jpg"
+import image6 from "../assets/project6.jpg"
 
 const projects = [
   {
     title: "Number Quiz Game",
     description: "Created using HTML, CSS & JavaScript.",
-    image: "project1.jpg",
+    image: image1,
     liveLink: "https://number-quiz-game.netlify.app/",
     sourceCode: "https://github.com/your-repo/number-quiz-game",
   },
   {
     title: "Coffee Time",
     description: "Created using React.js, Bootstrap & API.",
-    image: "project2.JPG",
+    image: image2,
     liveLink: "https://docket-word-character-counter.netlify.app/",
     sourceCode: "https://github.com/your-repo/coffee-time",
   },
   {
     title: "Docket - Word Counter",
     description: "Created using HTML, CSS & JavaScript.",
-    image: "project3.JPG",
+    image: image3,
     liveLink: "https://coffee-time-best-coffee.netlify.app/",
     sourceCode: "https://github.com/your-repo/docket-word-counter",
   },
   {
     title: "Best Brainy Quotes",
     description: "Created using HTML, CSS, JavaScript & jQuery.",
-    image: "project4.JPG",
+    image: image4,
     liveLink: "https://bestbrainyquotes.netlify.app/",
     sourceCode: "https://github.com/your-repo/best-brainy-quotes",
   },
   {
     title: "Fruit Crush Game",
     description: "Created using HTML, CSS, JavaScript & jQuery.",
-    image: "project5.JPG",
+    image: image5,
     liveLink: "https://docket-word-character-counter.netlify.app/",
     sourceCode: "https://github.com/your-repo/fruit-crush-game",
   },
   {
     title: "Video Call Application",
     description: "Created using React.js & ZegoCloud.",
-    image: "project6.JPG",
+    image: image6,
     liveLink: "https://bejewelled-lokum-c12dbc.netlify.app/",
     sourceCode: "https://github.com/your-repo/video-call-app",
   },
@@ -77,10 +83,9 @@ const Project = () => {
             className="bg-[#0d1a2b] p-5 rounded-lg shadow-lg transition-transform duration-300"
           >
             <motion.img
-              src={`src/assets/${project.image}`}
+              src={project.image}
               alt={project.title}
               className="w-full h-40 object-cover rounded-md"
-              // whileHover={{ scale: 1.1 }}
             />
             <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
             <p className="text-gray-300 text-sm mt-2">{project.description}</p>
