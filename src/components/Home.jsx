@@ -25,8 +25,14 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#0A192F] h-screen flex items-center" id="home">
-         <div className="w-1/2 flex flex-col pl-40 justify-center items-start">
+    <motion.div
+      className="bg-[#101f34] h-screen flex items-center"
+      id="home"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="w-1/2 flex flex-col pl-40 justify-center items-start">
         <div className="flex gap-20 items-center">
           <div>
             <p className="text-white text-[40px]">Hi There, I'm</p>
@@ -112,9 +118,7 @@ const Home = () => {
           />
         </motion.div>
       </div>
-
-   
-    </div>
+    </motion.div>
   );
 };
 

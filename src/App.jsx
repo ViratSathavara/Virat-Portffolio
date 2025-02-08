@@ -1,16 +1,16 @@
-  import { useState } from 'react'
-  import Topbar from './components/Topbar'
-  import Bottombar from './components/Bottombar'
-  import Home from './components/Home'
-  import Intro from './components/Intro'
-  import Experience from './components/Experience'
-  import Project from './components/Project'
-  import Skills from './components/Skills'
+import { useState } from 'react';
+import Topbar from './components/Topbar';
+import Bottombar from './components/Bottombar';
+import Home from './components/Home';
+import Intro from './components/Intro';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import Project from './components/Project';
+import ContactUs from './components/ContactUs';
 
-  function App() {
-
-    return (
-      <>
+function App() {
+  return (
+    <>
       <Topbar />
       <div className="overflow-y-auto overflow-x-hidden snap-y snap-mandatory">
         <Home />
@@ -18,10 +18,11 @@
         <Experience />
         <Skills />
         <Project />
+        <ContactUs />
       </div>
-      {/* <Bottombar />  */}
-      </>
-    )
-  }
+      {/* <Bottombar /> */}
+    </>
+  );
+}
 
-  export default App
+export default App;
