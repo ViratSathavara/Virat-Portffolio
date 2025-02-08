@@ -114,7 +114,7 @@ const Home = () => {
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
         >
           <img
-            src="src/assets/image.jpeg"
+            src="public/assets/image.jpeg"
             alt="Profile"
             className="object-cover w-full h-full"
           />

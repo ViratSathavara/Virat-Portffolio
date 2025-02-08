@@ -77,7 +77,7 @@ const Project = () => {
             className="bg-[#0d1a2b] p-5 rounded-lg shadow-lg transition-transform duration-300"
           >
             <motion.img
-              src={`src/assets/${project.image}`}
+              src={`public/assets/${project.image}`}
               alt={project.title}
               className="w-full h-40 object-cover rounded-md"
               // whileHover={{ scale: 1.1 }}

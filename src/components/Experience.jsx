@@ -40,23 +40,23 @@ const experiences = [
       "Graduated with a CGPA of 8.38 from Gujarat Technological University.",
     icon: <SchoolIcon />,
     icons: [
-      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
-      <img src="src/assets/intellij-idea.svg" alt="vscode" className="h-7" />,
-      <img src="src/assets/html.png" alt="vscode" className="h-7" />,
-      <img src="src/assets/css.png" alt="vscode" className="h-7" />,
-      <img src="src/assets/javascript.png" alt="vscode" className="h-7" />,
-      <img src="src/assets/bootstrap.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/vscode.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/intellij-idea.svg" alt="vscode" className="h-7" />,
+      <img src="public/assets/html.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/css.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/javascript.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/bootstrap.png" alt="vscode" className="h-7" />,
       <img
-        src="src/assets/adobe-illustrator.png"
+        src="public/assets/adobe-illustrator.png"
         alt="vscode"
         className="h-7"
       />,
       <img
-        src="src/assets/adobe-premiere-pro.png"
+        src="public/assets/adobe-premiere-pro.png"
         alt="vscode"
         className="h-7"
       />,
-      <img src="src/assets/adobe-audition.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/adobe-audition.png" alt="vscode" className="h-7" />,
     ],
   },
   {
@@ -67,11 +67,11 @@ const experiences = [
       "Enhanced usability of applications by applying accessibility standards. Developed a word counter project, 'Docket,' using React.js, efficiently counting and displaying word counts.",
     icon: <WorkIcon />,
     icons: [
-      <img src="src/assets/react-js.png" alt="react-js" className="h-7" />,
-      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
-      <img src="src/assets/html.png" alt="html" className="h-7" />,
-      <img src="src/assets/css.png" alt="css" className="h-7" />,
-      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/react-js.png" alt="react-js" className="h-7" />,
+      <img src="public/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="public/assets/html.png" alt="html" className="h-7" />,
+      <img src="public/assets/css.png" alt="css" className="h-7" />,
+      <img src="public/assets/vscode.png" alt="vscode" className="h-7" />,
     ],
   },
   {
@@ -82,15 +82,15 @@ const experiences = [
       "Developed Connectify, a social media app utilizing Firebase DB with content-based features and advanced filtering. Designed a dynamic website using Thymeleaf, REST API, and CRUD operations for efficient product data management.",
     icon: <WorkIcon />,
     icons: [
-      <img src="src/assets/java.png" alt="vscode" className="h-7" />,
-      <img src="src/assets/intellij-idea.svg" alt="react-js" className="h-7" />,
-      <img src="src/assets/sql-server.png" alt="react-js" className="h-7" />,
-      <img src="src/assets/spring-boot.png" alt="react-js" className="h-7" />,
-      <img src="src/assets/firebase.png" alt="react-js" className="h-7" />,
-      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
-      <img src="src/assets/html.png" alt="html" className="h-7" />,
-      <img src="src/assets/css.png" alt="css" className="h-7" />,
-      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/java.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/intellij-idea.svg" alt="react-js" className="h-7" />,
+      <img src="public/assets/sql-server.png" alt="react-js" className="h-7" />,
+      <img src="public/assets/spring-boot.png" alt="react-js" className="h-7" />,
+      <img src="public/assets/firebase.png" alt="react-js" className="h-7" />,
+      <img src="public/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="public/assets/html.png" alt="html" className="h-7" />,
+      <img src="public/assets/css.png" alt="css" className="h-7" />,
+      <img src="public/assets/vscode.png" alt="vscode" className="h-7" />,
     ],
   },
   {
@@ -101,18 +101,18 @@ const experiences = [
       "Worked on the Quick Hub project, developing responsive interfaces and optimizing UI performance with React.js. Applied efficient coding practices to ensure high performance across devices. Contributed to server-side functionalities and API integrations using Node.js, Express.js and Nest.js. Additionally, handled video editing for meta permissions using Adobe Premiere Pro.",
     icon: <WorkIcon />,
     icons: [
-      <img src="src/assets/github.png" alt="vscode" className="h-7" />,
-      <img src="src/assets/graphQl.png" alt="react-js" className="h-7" />,
-      <img src="src/assets/express-js.png" alt="react-js" className="h-7" />,
-      <img src="src/assets/nodejs.png" alt="react-js" className="h-7" />,
-      <img src="src/assets/nestjs.png" alt="react-js" className="h-7" />,
-      <img src="src/assets/javascript.png" alt="javascript" className="h-7" />,
-      <img src="src/assets/html.png" alt="html" className="h-7" />,
-      <img src="src/assets/css.png" alt="css" className="h-7" />,
-      <img src="src/assets/vscode.png" alt="vscode" className="h-7" />,
-      <img src="src/assets/vite.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/github.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/graphQl.png" alt="react-js" className="h-7" />,
+      <img src="public/assets/express-js.png" alt="react-js" className="h-7" />,
+      <img src="public/assets/nodejs.png" alt="react-js" className="h-7" />,
+      <img src="public/assets/nestjs.png" alt="react-js" className="h-7" />,
+      <img src="public/assets/javascript.png" alt="javascript" className="h-7" />,
+      <img src="public/assets/html.png" alt="html" className="h-7" />,
+      <img src="public/assets/css.png" alt="css" className="h-7" />,
+      <img src="public/assets/vscode.png" alt="vscode" className="h-7" />,
+      <img src="public/assets/vite.png" alt="vscode" className="h-7" />,
       <img
-        src="src/assets/adobe-premiere-pro.png"
+        src="public/assets/adobe-premiere-pro.png"
         alt="vscode"
         className="h-7"
       />,

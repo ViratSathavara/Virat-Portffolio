@@ -42,7 +42,7 @@ const Intro = () => {
           transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
         >
           <img
-            src="/src/assets/Computerimg2.png"
+            src="/public/assets/Computerimg2.png"
             alt="Computer Setup"
             className="object-cover w-full h-full"
           />
