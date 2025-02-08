@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import image from "../assets/image.jpeg"
 
 const Home = () => {
   const textRef = useRef(null);
@@ -114,7 +115,7 @@ const Home = () => {
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
         >
           <img
-            src="public/assets/image.jpeg"
+            src={image}
             alt="Profile"
             className="object-cover w-full h-full"
           />

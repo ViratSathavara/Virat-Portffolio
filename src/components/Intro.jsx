@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Phone, Email } from "@mui/icons-material";
 import { motion } from 'framer-motion';
+import Computerimg2 from "../assets/Computerimg2.png"
 import { t } from 'i18next';
 
 const Intro = () => {
@@ -42,7 +43,7 @@ const Intro = () => {
           transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
         >
           <img
-            src="/public/assets/Computerimg2.png"
+            src={Computerimg2}
             alt="Computer Setup"
             className="object-cover w-full h-full"
           />
