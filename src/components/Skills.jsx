@@ -62,11 +62,6 @@ const Skills = () => {
         "Good knowledge of Nest.js, plus Some experience in basic API integration and implementing CRUD operations.",
     },
     {
-      name: "Express.js",
-      percentage: 30,
-      tooltip: "Basic knowledge about Express.js.",
-    },
-    {
       name: "Java",
       percentage: 60,
       tooltip:

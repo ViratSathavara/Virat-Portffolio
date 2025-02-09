@@ -31,7 +31,6 @@ import springBoot from "../assets/spring-boot.png";
 import firebase from "../assets/firebase.png";
 import github from "../assets/github.png";
 import graphQl from "../assets/graphQl.png";
-import expressJs from "../assets/express-js.png";
 import nodeJs from "../assets/nodejs.png";
 import nestJs from "../assets/nestjs.png";
 import vite from "../assets/vite.png";
@@ -81,7 +80,7 @@ const experiences = [
     title: "Frontend Developer at Cloudpeak Technologies",
     description: "Worked on the Quick Hub project, developing responsive interfaces and optimizing UI performance with React.js.",
     icon: <WorkIcon />,
-    icons: [github, graphQl, expressJs, nodeJs, nestJs, javascript, html, css, vscode, vite, premierePro],
+    icons: [github, graphQl, nodeJs, nestJs, javascript, html, css, vscode, vite, premierePro],
   },
   {
     id: 7,
