@@ -51,13 +51,13 @@ const Skills = () => {
     },
     {
       name: "Node.js",
-      percentage: 40,
+      percentage: 30,
       tooltip:
         "Basic knowledge of Node.js, with experience in backend development.",
     },
     {
       name: "Nest.js",
-      percentage: 50,
+      percentage: 20,
       tooltip:
         "Good knowledge of Nest.js, plus Some experience in basic API integration and implementing CRUD operations.",
     },
@@ -75,13 +75,13 @@ const Skills = () => {
     },
     {
       name: "Database",
-      percentage: 50,
+      percentage: 40,
       tooltip:
         "Basic knowledge of database functionalities and queries, with hands-on experience in handling data operations.",
     },
     {
       name: "GraphQL",
-      percentage: 40,
+      percentage: 20,
       tooltip: "Basic knowledge and understanding of GraphQL.",
     },
   ];

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { useInView } from 'react-intersection-observer';
+import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { Phone, Email } from "@mui/icons-material";
-import { motion } from 'framer-motion';
-import Computerimg2 from "../assets/Computerimg2.png"
-import { t } from 'i18next';
+import { motion } from "framer-motion";
+import Computerimg2 from "../assets/Computerimg2.png";
+import { t } from "i18next";
 
 const Intro = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -27,15 +27,38 @@ const Intro = () => {
   return (
     <div
       ref={ref}
-      className={`bg-[#0A192F] h-[calc(100vh-1px)]  overflow-auto flex items-center justify-center transition-all duration-1000 ${
+      className={`bg-[#0A192F] min-h-screen flex py-20 flex-col-reverse lg:flex-row items-center justify-center px-4 sm:px-10 lg:px-20 transition-all duration-1000 ${
         inView ? "opacity-100" : "opacity-0"
       }`}
       id="about"
       onMouseMove={handleMouseMove}
     >
-      <div className="w-1/2 flex justify-center py-10">
+      <div
+        className={`text-white w-full lg:w-1/2 text-center lg:text-start transition-all duration-1000 ${
+          inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+        }`}
+      >
+        <div className="max-w-2xl mx-auto">
+          <p className="text-3xl">{t("intro.title")}</p>
+          <p className="text-lg mt-6">{t("intro.desc1")}</p>
+          <p className="text-lg mt-4">{t("intro.desc2")}</p>
+
+          <div className="flex flex-col items-center lg:items-start gap-4 mt-6">
+            <div className="flex items-center gap-2 text-lg">
+              <Phone style={{ color: "#4F83CC" }} />
+              <span>{t("intro.mobileNo")}</span>
+            </div>
+            <div className="flex items-center gap-2 text-lg">
+              <Email style={{ color: "#4F83CC" }} />
+              <span>{t("intro.emailId")}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full lg:w-1/2 flex justify-center py-10">
         <motion.div
-          className="w-[400px] h-auto rounded-lg overflow-hidden shadow-lg relative"
+          className="w-full sm:w-[350px] md:w-[400px] rounded-lg overflow-hidden shadow-lg relative"
           style={rotateImage}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -45,32 +68,9 @@ const Intro = () => {
           <img
             src={Computerimg2}
             alt="Computer Setup"
-            className="object-cover w-full h-full"
+            className="object-cover w-full"
           />
         </motion.div>
-      </div>
-
-      <div
-        className={`text-white px-4 w-1/2 text-start transition-all duration-1000 ${
-          inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-        }`}
-      >
-        <div className="max-w-190 text-justify">
-          <p className="text-3xl">{t('intro.title')}</p>
-          <p className="text-lg mt-10 mb-6">{t('intro.desc1')}
-          </p>
-          <p className="text-lg mb-6">{t('intro.desc2')}</p>
-          <div className="flex justify-start gap-6 mt-4 flex-col">
-            <div className="flex items-center gap-2 text-lg">
-              <Phone style={{ color: "#4F83CC" }} />
-              <span>{t('intro.mobileNo')}</span>
-            </div>
-            <div className="flex items-center gap-2 text-lg">
-              <Email style={{ color: "#4F83CC" }} />
-              <span>{t('intro.emailId')}</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
