@@ -30,21 +30,21 @@ import fruitCrush2 from "../assets/fruitcrush2.png";
 const projects = [
   {
     title: "Connectify - Social Media App",
-    description: "Built using HTML, CSS & JavaScript.",
+    description: "Implemented user authentication (login, signup, password recovery) and real-time data syncing with Firebase Realtime Database. Developed features for creating, editing, and deleting posts, along with real-time commenting functionality.",
     image: [connectify1, connectify2, connectify3, connectify4, connectify5, connectify6],
     liveLink: "https://connectify-social-media-app.netlify.app/",
     sourceCode: "https://github.com/ViratSathavara/Connectify-social-media-app",
   },
   {
     title: "Portfolio Website",
-    description: "Developed using React.js & Tailwind CSS.",
+    description: "Make Responsive Portfolio Website using ReactJS, tailwind css and MUI components.",
     image: [portfolionew1, portfolionew2, portfolionew3, portfolionew4, portfolionew5, portfolionew6],
     liveLink: "https://virat-sathavara.netlify.app/",
     sourceCode: "https://github.com/ViratSathavara/Virat-Portffolio",
   },
   {
     title: "NestJs Basic CRUD API",
-    description: "Built with NestJS, GraphQL, and PostgreSQL.",
+    description: "basic Understanding about nestJs using CRUD operations.",
     image: [nestjs],
     sourceCode: "https://github.com/ViratSathavara/Nestjs-example-project",
   },
