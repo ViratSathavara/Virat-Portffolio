@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import image from "../assets/myImg2.jpg";
-import CV from "../assets/Virat_CV.pdf";
+import CV from "../assets/Virat_Sathavara_CV.pdf";
 
 
 const Home = () => {
