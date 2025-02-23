@@ -41,10 +41,7 @@ const Home = () => {
           {t("home.name")}
         </h1>
         <div className="h-16">
-          <span
-            className="text-white text-2xl sm:text-3xl"
-            ref={textRef}
-          ></span>
+          <span className="text-white text-2xl sm:text-3xl" ref={textRef}></span>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 mt-6">
@@ -65,18 +62,16 @@ const Home = () => {
               },
               transition: "all 0.4s ease-in-out",
             }}
-            // onClick={() => {
-            //   const link = document.createElement("a");
-            //   link.href = "../assets/Virat_CV.pdf";
-            //   link.download = "Virat_Sathavara_CV.pdf";
-            //   document.body.appendChild(link);
-            //   link.click();
-            //   document.body.removeChild(link);
-            // }}
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/Virat_CV.pdf";
+              link.download = "Virat_Sathavara_CV.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
           >
-            <a download href="../assets/Virat_CV.pdf" class="btn">
-              {t("home.downloadCV")}
-            </a>
+            {t("home.downloadCV")}
           </Button>
 
           <div className="flex justify-center gap-4">
@@ -120,11 +115,7 @@ const Home = () => {
           }}
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
         >
-          <img
-            src={image}
-            alt="Profile"
-            className="object-cover w-full h-full"
-          />
+          <img src={image} alt="Profile" className="object-cover w-full h-full" />
         </motion.div>
       </div>
     </motion.div>
