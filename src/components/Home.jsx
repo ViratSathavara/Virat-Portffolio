@@ -74,7 +74,7 @@ const Home = () => {
             //   document.body.removeChild(link);
             // }}
           >
-            <a href="assets/Virat_CV.pdf" download="Virat_Sathavara_CV.pdf">
+            <a download href="../assets/Virat_CV.pdf" class="btn">
               {t("home.downloadCV")}
             </a>
           </Button>
