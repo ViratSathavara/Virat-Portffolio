@@ -6,6 +6,8 @@ import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import image from "../assets/myImg2.jpg";
+import CV from "../assets/Virat_CV.pdf";
+
 
 const Home = () => {
   const textRef = useRef(null);
@@ -64,7 +66,7 @@ const Home = () => {
             }}
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/Virat_CV.pdf";
+              link.href = CV;
               link.download = "Virat_Sathavara_CV.pdf";
               document.body.appendChild(link);
               link.click();
