@@ -44,44 +44,50 @@ const Skills = () => {
         "1.5 years of experience with React.js, including 7 months working on an industrial project called 'QuickHub,' focusing on building responsive interfaces and efficient API integrations in CloudPeak Technologies and services.",
     },
     {
+      name: "Node.js",
+      percentage: 50,
+      tooltip:
+        "Basic knowledge of Node.js, with experience in backend development.",
+    },
+    {
+      name: "Express JS",
+      percentage: 50,
+      tooltip:
+        "Good knowledge of Express Js, with good experience in API integration and implementing CRUD operations.",
+    },
+    {
       name: "React Vite",
       percentage: 80,
       tooltip:
         "Advanced knowledge of React Vite, focusing on fast and optimized web application development.",
     },
     {
-      name: "Node.js",
-      percentage: 30,
-      tooltip:
-        "Basic knowledge of Node.js, with experience in backend development.",
-    },
-    {
       name: "Nest.js",
-      percentage: 20,
+      percentage: 10,
       tooltip:
         "Good knowledge of Nest.js, plus Some experience in basic API integration and implementing CRUD operations.",
     },
     {
-      name: "Java",
+      name: "SQL",
+      percentage: 40,
+      tooltip:
+        "Basic knowledge of SQL database functionalities and queries, with hands-on experience in handling data operations.",
+    },
+    {
+      name: "MongoDB",
       percentage: 60,
       tooltip:
-        "Good knowledge of Java, with a good understanding of Object-Oriented Programming (OOP) concepts.",
+        "Good knowledge of MongoDB, with hands-on experience in database management and CRUD operations.",
     },
     {
-      name: "Spring Boot",
+      name: "PostgreSQL",
       percentage: 40,
       tooltip:
-        "Basic knowledge of Spring Boot, with experience in building small projects and understanding core concepts.",
-    },
-    {
-      name: "Database",
-      percentage: 40,
-      tooltip:
-        "Basic knowledge of database functionalities and queries, with hands-on experience in handling data operations.",
+        "Basic knowledge of PostgreSQL, with hands-on experience in database management and CRUD operations.",
     },
     {
       name: "GraphQL",
-      percentage: 20,
+      percentage: 70,
       tooltip: "Basic knowledge and understanding of GraphQL.",
     },
   ];

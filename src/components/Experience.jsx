@@ -34,6 +34,8 @@ import graphQl from "../assets/graphQl.png";
 import nodeJs from "../assets/nodejs.png";
 import nestJs from "../assets/nestjs.png";
 import vite from "../assets/vite.png";
+import nodeJS from "../assets/nodejs.png";
+import expressJS from "../assets/express-js.png";
 
 const experiences = [
   {
@@ -80,7 +82,7 @@ const experiences = [
     title: "Frontend Developer at Cloudpeak Technologies",
     description: "Worked on the Quick Hub project, developing responsive interfaces and optimizing UI performance with React.js.",
     icon: <WorkIcon />,
-    icons: [github, graphQl, nodeJs, nestJs, javascript, html, css, vscode, vite, premierePro],
+    icons: [github, graphQl, nodeJS, expressJS, nestJs, javascript, html, css, vscode, vite, premierePro],
   },
   {
     id: 7,

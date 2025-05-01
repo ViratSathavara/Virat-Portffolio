@@ -9,6 +9,10 @@ import connectify3 from "../assets/connectify3.png";
 import connectify4 from "../assets/connectify4.png";
 import connectify5 from "../assets/connectify5.png";
 import connectify6 from "../assets/connectify6.png";
+import mern1 from "../assets/MERN_1.png";
+import mern2 from "../assets/MERN_2.png";
+import mern3 from "../assets/MERN_3.png";
+import mern4 from "../assets/MERN_4.png";
 import portfolionew1 from "../assets/portfolionew1.png";
 import portfolionew2 from "../assets/portfolionew2.png";
 import portfolionew3 from "../assets/portfolionew3.png";
@@ -29,11 +33,10 @@ import fruitCrush2 from "../assets/fruitcrush2.png";
 
 const projects = [
   {
-    title: "Connectify - Social Media App",
-    description: "Implemented user authentication (login, signup, password recovery) and real-time data syncing with Firebase Realtime Database. Developed features for creating, editing, and deleting posts, along with real-time commenting functionality.",
-    image: [connectify1, connectify2, connectify3, connectify4, connectify5, connectify6],
-    liveLink: "https://connectify-social-media-app.netlify.app/",
-    sourceCode: "https://github.com/ViratSathavara/Connectify-social-media-app",
+    title: "MERN Stack with MVC Pattern",
+    description: "A full-stack CRUD application built with the MERN stack (MongoDB, Express.js, React, Node.js) for managing product inventory. This system allows admins to add, edit, delete, and track products in real time, with a user-friendly interface and seamless database synchronization.",
+    image: [mern1, mern2, mern3, mern4],
+    sourceCode: "https://github.com/ViratSathavara/MernStack_with_MVC_Pattern",
   },
   {
     title: "Portfolio Website",
@@ -41,6 +44,13 @@ const projects = [
     image: [portfolionew1, portfolionew2, portfolionew3, portfolionew4, portfolionew5, portfolionew6],
     liveLink: "https://virat-sathavara.netlify.app/",
     sourceCode: "https://github.com/ViratSathavara/Virat-Portffolio",
+  },
+  {
+    title: "Connectify - Social Media App",
+    description: "Implemented user authentication (login, signup, password recovery) and real-time data syncing with Firebase Realtime Database. Developed features for creating, editing, and deleting posts, along with real-time commenting functionality.",
+    image: [connectify1, connectify2, connectify3, connectify4, connectify5, connectify6],
+    liveLink: "https://connectify-social-media-app.netlify.app/",
+    sourceCode: "https://github.com/ViratSathavara/Connectify-social-media-app",
   },
   {
     title: "NestJs Basic CRUD API",
