@@ -54,7 +54,8 @@ const projects = [
     title: "Uber-Clone: A Full-Stack Ride-Hailing Platform",
     description: "Uber-Clone – A full-stack ride-hailing web app built with the MERN stack (MongoDB, Express.js, React, Node.js), allowing passengers to book nearby drivers in real-time. Features JWT authentication, REST APIs, WebSockets for live tracking, and a responsive UI with Tailwind CSS & Material-UI. Deployed on Render with MongoDB Atlas for cloud database management.",
     image: [uber1, uber2, uber3, uber4, uber5, uber6, uber7, uber8, uber9, uber10, uber11, uber12, uber13, uber14],
-    sourceCode: "https://uber-clone-6qea.onrender.com",
+    liveLink: "https://uber-clone-6qea.onrender.com",
+    sourceCode: "https://github.com/ViratSathavara/Uber_Clone",
   },{
     title: "MERN Stack with MVC Pattern",
     description: "A full-stack CRUD application built with the MERN stack (MongoDB, Express.js, React, Node.js) for managing product inventory. This system allows admins to add, edit, delete, and track products in real time, with a user-friendly interface and seamless database synchronization.",
