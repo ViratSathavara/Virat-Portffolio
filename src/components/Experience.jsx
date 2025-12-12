@@ -36,6 +36,9 @@ import nestJs from "../assets/nestjs.png";
 import vite from "../assets/vite.png";
 import nodeJS from "../assets/nodejs.png";
 import expressJS from "../assets/express-js.png";
+import nextjs from "../assets/nextjs.png";
+import cursorAi from "../assets/cursor-ai.png";
+import typescript from "../assets/typescript.png";
 
 const experiences = [
   {
@@ -78,14 +81,21 @@ const experiences = [
   },
   {
     id: 6,
-    date: "June 2024 - Present",
+    date: "June 2024 - May 2025",
     title: "Frontend Developer at Cloudpeak Technologies",
     description: "Worked on the Quick Hub project, developing responsive interfaces and optimizing UI performance with React.js.",
     icon: <WorkIcon />,
     icons: [github, graphQl, nodeJS, expressJS, nestJs, javascript, html, css, vscode, vite, premierePro],
+  },{
+    id: 7,
+    date: "July 2025 - Present",
+    title: "Frontend Developer at Coddit64",
+    description: "Worked on the SHIFTit HEalthcare project, developing responsive interfaces and optimizing UI performance with Next.js.",
+    icon: <WorkIcon />,
+    icons: [github, nextjs, typescript, nodeJS, expressJS, html, css, vscode, cursorAi],
   },
   {
-    id: 7,
+    id: 8,
     title: "Continue...",
     icon: <ArrowDownwardIcon />,
   },
