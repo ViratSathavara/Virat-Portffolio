@@ -5,7 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import image from "../assets/myImg2.jpg";
+import image from "../assets/myImg2.webp";
 import CV from "../assets/Virat_Sathavara_CV.pdf";
 
 
