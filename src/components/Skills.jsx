@@ -42,6 +42,16 @@ const Skills = () => {
       percentage: 90,
       tooltip:
         "1.5 years of experience with React.js, including 7 months working on an industrial project called 'QuickHub,' focusing on building responsive interfaces and efficient API integrations in CloudPeak Technologies and services.",
+    },{
+      name: "Next.js",
+      percentage: 75,
+      tooltip:
+        "1 year of industrial experience on the SHIFTit Healthcare project using Next.js, focused on developing responsive user interfaces and implementing efficient API integrations at Coddit64.",
+    },{
+      name: "TypeScript.js",
+      percentage: 60,
+      tooltip:
+        "1 year of industrial experience working on the SHIFTit Healthcare project using TypeScript with Next.js, building responsive interfaces and implementing efficient API integrations at Coddit64.",
     },
     {
       name: "Node.js",
@@ -94,7 +104,7 @@ const Skills = () => {
 
   const toolsAndSoftware = [
     { name: "VS Code", percentage: 90 },
-    { name: "IntelliJ IDEA", percentage: 85 },
+    { name: "Cursor AI", percentage: 60 },
     { name: "Adobe Illustrator", percentage: 75 },
     { name: "Adobe Audition", percentage: 80 },
     { name: "Adobe Premiere Pro", percentage: 85 },

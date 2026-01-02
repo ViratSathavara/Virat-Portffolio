@@ -50,7 +50,7 @@ const Intro = () => {
             </div>
             <div className="flex items-center gap-2 text-lg">
               <Email style={{ color: "#4F83CC" }} />
-              <span>{t("intro.emailId")}</span>
+              <a href="mailto:viratmsathavara2510@gmail.com"><span>{t("intro.emailId")}</span></a>
             </div>
           </div>
         </div>
