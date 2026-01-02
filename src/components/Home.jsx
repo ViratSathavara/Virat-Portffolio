@@ -24,7 +24,7 @@ const Home = () => {
         backDelay: 1500,
         backSpeed: 60,
         loop: true,
-        strings: ["Frontend Developer", "ReactJs Developer", "Video Editor"],
+        strings: ["Frontend Developer", "ReactJs Developer", "NextJs Developer"],
       });
     }
   }, []);

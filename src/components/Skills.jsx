@@ -72,12 +72,6 @@ const Skills = () => {
         "Advanced knowledge of React Vite, focusing on fast and optimized web application development.",
     },
     {
-      name: "Nest.js",
-      percentage: 10,
-      tooltip:
-        "Good knowledge of Nest.js, plus Some experience in basic API integration and implementing CRUD operations.",
-    },
-    {
       name: "SQL",
       percentage: 40,
       tooltip:
@@ -99,6 +93,11 @@ const Skills = () => {
       name: "GraphQL",
       percentage: 70,
       tooltip: "Basic knowledge and understanding of GraphQL.",
+    },
+    {
+      name: "Rest API",
+      percentage: 50,
+      tooltip: "Basic knowledge and understanding of Rest API.",
     },
   ];
 
